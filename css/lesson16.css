@@ -1,0 +1,22 @@
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  body .container {
+    margin-top: 30px; }
+    body .container .row .col-4 .card {
+      background-color: #005cbf;
+      transition: all 0.5s linear;
+      -webkit-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear; }
+      body .container .row .col-4 .card .card-header .h2 {
+        color: #80bdff; }
+      body .container .row .col-4 .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px black; }
+    body .container .row .col-4:nth-child(2) .card {
+      background-color: red; }
+
+/*# sourceMappingURL=lesson16.css.map */

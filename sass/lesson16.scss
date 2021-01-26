@@ -1,0 +1,64 @@
+$main-color:red;
+
+@mixin effect($property,$time,$function){
+  transition: $property $time $function;
+  -webkit-transition:$property $time $function;
+  -o-transition: $property $time $function;
+  -moz-transition: $property $time $function;
+}
+
+
+
+
+body{
+  //background-image: url("../img/bg.jpg");
+  //background-size: 100%;
+  //background-repeat: no-repeat;
+
+  background: {
+    image: url("../img/bg.jpg");
+    size: 100%;
+    repeat: no-repeat;
+    attachment: fixed;
+  };
+
+  .container{
+    margin-top: 30px;
+
+    .row{
+      .col-4{
+        .card{
+          background-color: #005cbf;
+          .card-header{
+            .h2{
+              color: #80bdff;
+            }
+
+
+
+
+          }
+
+          //transition: all 0.5s linear;
+          //-webkit-transition: all 0.5s linear;
+          //-o-transition: all 0.5s linear;
+          //-moz-transition:  all 0.5s linear ;
+          @include effect(all, 0.5s, linear );
+
+          &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 20px black;
+          }
+
+        }
+        &:nth-child(2){
+          .card{
+            background-color: $main-color;
+          }
+      }
+
+      }
+    }
+  }
+}
+
